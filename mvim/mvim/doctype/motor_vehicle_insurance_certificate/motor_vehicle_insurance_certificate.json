@@ -26,6 +26,9 @@
   "make",
   "levy_charge",
   "total_premium",
+  "section_break_sg8xj",
+  "qr_code",
+  "qr_image",
   "amended_from"
  ],
  "fields": [
@@ -144,12 +147,28 @@
    "options": "Motor Vehicle Insurance Certificate",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sg8xj",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Small Text",
+   "label": "QR Code"
+  },
+  {
+   "fieldname": "qr_image",
+   "fieldtype": "Image",
+   "label": "QR Image",
+   "options": "qr_code"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-04 22:30:20.383347",
+ "modified": "2023-11-04 23:05:04.602762",
  "modified_by": "Administrator",
  "module": "MVIM",
  "name": "Motor Vehicle Insurance Certificate",
