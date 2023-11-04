@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-11-04 22:20:40.034876",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "insurance_company",
+  "customer_name",
+  "policy_no",
+  "vehicle_registration_no",
+  "start_date",
+  "end_date",
+  "policy_type",
+  "attachment",
+  "logbook_no",
+  "column_break_mtafy",
+  "year_of_manufacture",
+  "chasis_no",
+  "color",
+  "model",
+  "make",
+  "levy_charge",
+  "total_premium",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MVIC-.YYYY.-"
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "insurance_company.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "label": "Policy No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_registration_no",
+   "fieldtype": "Link",
+   "label": "Registered Vehicle",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Policy Start Date",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Policy End Date",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "policy_type",
+   "fieldtype": "Link",
+   "label": "Policy Type",
+   "options": "Policy Type Items"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment PoP"
+  },
+  {
+   "fieldname": "logbook_no",
+   "fieldtype": "Data",
+   "label": "Logbook No"
+  },
+  {
+   "fieldname": "column_break_mtafy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle.csf_tz_year",
+   "fieldname": "year_of_manufacture",
+   "fieldtype": "Data",
+   "label": "Year of Manufacture"
+  },
+  {
+   "fetch_from": "vehicle.chassis_no",
+   "fieldname": "chasis_no",
+   "fieldtype": "Data",
+   "label": "Chasis No"
+  },
+  {
+   "fetch_from": "vehicle.color",
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fetch_from": "vehicle.model",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fetch_from": "vehicle.make",
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "levy_charge",
+   "fieldtype": "Float",
+   "label": "Levy Charge"
+  },
+  {
+   "fieldname": "total_premium",
+   "fieldtype": "Float",
+   "label": "Total Premium "
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Motor Vehicle Insurance Certificate",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-04 22:30:20.383347",
+ "modified_by": "Administrator",
+ "module": "MVIM",
+ "name": "Motor Vehicle Insurance Certificate",
+ "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
