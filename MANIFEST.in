@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include mvim *.css
+recursive-include mvim *.csv
+recursive-include mvim *.html
+recursive-include mvim *.ico
+recursive-include mvim *.js
+recursive-include mvim *.json
+recursive-include mvim *.md
+recursive-include mvim *.png
+recursive-include mvim *.py
+recursive-include mvim *.svg
+recursive-include mvim *.txt
+recursive-exclude mvim *.pyc
