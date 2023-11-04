@@ -55,10 +55,12 @@ app_license = "MIT"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-#	"methods": "mvim.utils.jinja_methods",
-#	"filters": "mvim.utils.jinja_filters"
-# }
+jinja = {
+    "methods": [
+		"mvim.qr_code.get_qr_code"
+	],
+    #"filters": "mvim.utils.jinja_filters"
+}
 
 # Installation
 # ------------
